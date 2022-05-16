@@ -6,12 +6,12 @@ const MultiBar = (props) => {
   const arrOfValues = props;
   const formatedInputArr = formatInput(arrOfValues);
 
+
   return (
     <div>
       {formatedInputArr.map((item) => {
         return (
           <SingleBar
-            key={item.index}
             left={item.left}
             right={item.right}
             title={item.title}

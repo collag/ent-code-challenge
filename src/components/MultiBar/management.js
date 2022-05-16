@@ -1,6 +1,8 @@
-
 //Formats the hard-coded and api values to be same object
 export const formatInput = (input) => {
+  if(!input || !input.values.length || !Array.isArray(input.values)){
+    return [];
+  }
   if (!input.values[0].title) {
     const newArr = input.values.map((item) => {
       return {
@@ -12,11 +14,7 @@ export const formatInput = (input) => {
     return newArr;
   } else {
     const newArr = input.values.map((item) => {
-      return {
-        title: item.title,
-        left: { color: "#007cff", value: item.left.value },
-        right: { color: "#ffe944", value: item.right.value },
-      };
+      return { ...item };
     });
     return newArr;
   }

@@ -8,7 +8,7 @@ const Home = () => {
   const url =
     "https://gist.githubusercontent.com/gargrave/e2fd3d07d44862a094dabb36137a9187/raw/30d126f95eefa84895c1f5608eea69cd92629e2a/mock-api.json";
 
-  const [data] = useFetch(url);
+  const [data]= useFetch(url);
   const multibarValues = values;
 
   return (
